@@ -61,6 +61,20 @@ The Event Management Platform is a full-stack web application that allows users 
 | PUT    | /api/events/:id    | Update an event   |
 | DELETE | /api/events/:id    | Delete an event   |
 
+## Test User Credentials
+
+The database is pre-seeded with test users. Use the following credentials to test authentication:
+
+- **Regular User:**
+  - Email: `testuser@example.com`
+  - Password: `Test@123`
+
+- **Guest Access:**
+  - Guests can browse events without login, but cannot create or edit events.
+
+> **Note:** If the database is reset, the test user will be restored automatically
+
+
 ## Future Enhancements
 - **Image Hosting** (Cloudinary or alternative)
 - **Event Booking & RSVP system**
@@ -69,5 +83,4 @@ The Event Management Platform is a full-stack web application that allows users 
 ## Contribution
 Feel free to fork the repo, create a branch, and submit a PR!
 
-## License
-This project is licensed under the MIT License.
+
