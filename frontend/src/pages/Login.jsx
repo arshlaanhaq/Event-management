@@ -11,7 +11,7 @@ export default function Login(){
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+            const res = await axios.post("https://event-management-b6tv.onrender.com/api/auth/login", { email, password });
             localStorage.setItem("token", res.data.token);
             navigate("/dashboard");
         } catch (err) {
@@ -20,7 +20,7 @@ export default function Login(){
     };
     const handleGuestLogin = async () => {
         try {
-            const res = await axios.post("http://localhost:5000/api/auth/guest-login");
+            const res = await axios.post("https://event-management-b6tv.onrender.com/api/auth/guest-login");
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("userId", res.data._id);
             localStorage.setItem("isGuest", "true");

@@ -24,7 +24,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const res = await axios.get("http://localhost:5000/api/events");
+                const res = await axios.get("https://event-management-b6tv.onrender.com/api/events");
                 setEvents(res.data);
                 setLoading(false);
             } catch (err) {
@@ -46,7 +46,7 @@ const Dashboard = () => {
                 return;
             }
 
-            await axios.delete(`http://localhost:5000/api/events/${id}`, {
+            await axios.delete(`https://event-management-b6tv.onrender.com/api/events/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
 

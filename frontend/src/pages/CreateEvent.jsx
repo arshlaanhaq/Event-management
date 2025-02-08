@@ -16,7 +16,7 @@ export default function CreateEvent() {
         try {
             const token = localStorage.getItem("token");
             const res = await axios.post(
-                "http://localhost:5000/api/events",
+                "https://event-management-b6tv.onrender.com/api/events",
                 { name, description, date, category },
                 { headers: { Authorization: `Bearer ${token}` } }
             );

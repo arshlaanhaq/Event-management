@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { io } from "socket.io-client";
 import axios from "axios";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://event-management-b6tv.onrender.com");
 
 const EventDetail = () => {
     const { id } = useParams();
@@ -16,7 +16,7 @@ const EventDetail = () => {
     useEffect(() => {
         const fetchEvent = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/api/events/${id}`);
+                const res = await axios.get(`https://event-management-b6tv.onrender.com/api/events/${id}`);
                 setEvent(res.data);
                 setAttendees(res.data.attendees || 0);
                 setLoading(false);
@@ -41,7 +41,7 @@ const EventDetail = () => {
     const updateAttendees = async () => {
         try {
             const res = await axios.post(
-               ` http://localhost:5000/api/events/${id}/attendees`,
+               ` https://event-management-b6tv.onrender.com/api/events/${id}/attendees`,
             { count: attendees + 1 }
         );
             socket.emit("updateAttendees", { eventId: id, count: res.data.attendees });

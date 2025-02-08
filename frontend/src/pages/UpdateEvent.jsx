@@ -17,7 +17,7 @@ const UpdateEvent = () => {
     useEffect(() => {
         const fetchEvent = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/api/events/${id}`);
+                const res = await axios.get(`https://event-management-b6tv.onrender.com/api/events/${id}`);
                 setEventData(res.data);
                 setLoading(false);
             } catch (err) {
@@ -39,7 +39,7 @@ const UpdateEvent = () => {
             const token = localStorage.getItem("token");
 
             await axios.put(
-                `http://localhost:5000/api/events/${id}`,
+                `https://event-management-b6tv.onrender.com/api/events/${id}`,
                 eventData,
                 {
                     headers: {

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import axios from "axios";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://event-management-b6tv.onrender.com");
 
 const AttendeeCounter = ({ eventId }) => {
     const [attendees, setAttendees] = useState(0);
@@ -22,7 +22,7 @@ const AttendeeCounter = ({ eventId }) => {
     const updateAttendees = async () => {
         try {
             const res = await axios.post(
-                `http://localhost:5000/api/events/${eventId}/attendees`,
+                `https://event-management-b6tv.onrender.com/api/events/${eventId}/attendees`,
                 { count: attendees + 1 }
             );
             socket.emit("updateAttendees", { eventId, count: res.data.attendees });
