@@ -22,7 +22,7 @@ The Event Management Platform is a full-stack web application that allows users 
 ## Installation
 ### Prerequisites
 - Node.js and npm installed
-- MongoDB Atlas or Planetscale database setup
+- MongoDB Atlas database setup
 
 ### Steps to Run the Project
 1. Clone the repository:
