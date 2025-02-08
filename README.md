@@ -10,7 +10,7 @@ The Event Management Platform is a full-stack web application that allows users 
 - Category field for event classification
 - Responsive UI with React.js
 - Secure backend with Node.js and Express.js
-- Database integration with MongoDB Atlas or Planetscale
+- Database integration with MongoDB Atlas 
 
 ## Tech Stack
 - **Frontend:** React.js
