@@ -17,7 +17,7 @@ The Event Management Platform is a full-stack web application that allows users 
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB Atlas (or Planetscale for SQL)
 - **Real-time Communication:** Socket.IO
-- **Deployment:** Vercel/Netlify (Frontend), Render/Railway.app (Backend)
+- **Deployment:** Netlify (Frontend), Render (Backend)
 
 ## Installation
 ### Prerequisites
